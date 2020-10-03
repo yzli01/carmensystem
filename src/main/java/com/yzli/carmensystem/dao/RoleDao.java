@@ -18,4 +18,6 @@ public interface RoleDao {
     int updateByPrimaryKey(Role record);
 
     Role selectByRName(String rName);
+
+    Role selectByRole(String role);
 }

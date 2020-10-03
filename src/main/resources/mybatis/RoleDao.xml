@@ -22,6 +22,12 @@
     from Role
     where r_name = #{RName,jdbcType=VARCHAR}
   </select>
+  <select id="selectByRole" parameterType="String" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from Role
+    where role = #{role,jdbcType=VARCHAR}
+  </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from Role
     where id = #{id,jdbcType=INTEGER}
