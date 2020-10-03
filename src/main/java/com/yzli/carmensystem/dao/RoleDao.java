@@ -16,4 +16,6 @@ public interface RoleDao {
     int updateByPrimaryKeySelective(Role record);
 
     int updateByPrimaryKey(Role record);
+
+    Role selectByRName(String rName);
 }

@@ -1,31 +1,52 @@
 package com.yzli.carmensystem.pojo;
 
 import java.io.Serializable;
+import java.util.Date;
 
 /**
- * User
+ * WaitingToDo
  * @author 
  */
 public class Waitingtodo implements Serializable {
     /**
-     * id
+     * id 编号
      */
     private Integer id;
 
     /**
-     * name
+     * dbsx 待办事项
      */
-    private String name;
+    private String dbsx;
 
     /**
-     * passwd
+     * dbry 待办人员
      */
-    private String passwd;
+    private String dbry;
 
     /**
-     * role
+     * sxbz 实现标志
      */
-    private String role;
+    private String sxbz;
+
+    /**
+     * willingd 实现时间
+     */
+    private Date willingd;
+
+    /**
+     * willingt 期望时间
+     */
+    private Date willingt;
+
+    /**
+     * by1 备用1
+     */
+    private String by1;
+
+    /**
+     * by2 备用2
+     */
+    private String by2;
 
     private static final long serialVersionUID = 1L;
 
@@ -37,27 +58,59 @@ public class Waitingtodo implements Serializable {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getDbsx() {
+        return dbsx;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setDbsx(String dbsx) {
+        this.dbsx = dbsx;
     }
 
-    public String getPasswd() {
-        return passwd;
+    public String getDbry() {
+        return dbry;
     }
 
-    public void setPasswd(String passwd) {
-        this.passwd = passwd;
+    public void setDbry(String dbry) {
+        this.dbry = dbry;
     }
 
-    public String getRole() {
-        return role;
+    public String getSxbz() {
+        return sxbz;
     }
 
-    public void setRole(String role) {
-        this.role = role;
+    public void setSxbz(String sxbz) {
+        this.sxbz = sxbz;
+    }
+
+    public Date getWillingd() {
+        return willingd;
+    }
+
+    public void setWillingd(Date willingd) {
+        this.willingd = willingd;
+    }
+
+    public Date getWillingt() {
+        return willingt;
+    }
+
+    public void setWillingt(Date willingt) {
+        this.willingt = willingt;
+    }
+
+    public String getBy1() {
+        return by1;
+    }
+
+    public void setBy1(String by1) {
+        this.by1 = by1;
+    }
+
+    public String getBy2() {
+        return by2;
+    }
+
+    public void setBy2(String by2) {
+        this.by2 = by2;
     }
 }

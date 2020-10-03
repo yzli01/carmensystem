@@ -1,31 +1,49 @@
 package com.yzli.carmensystem.pojo;
 
 import java.io.Serializable;
+import java.util.Date;
 
 /**
- * User
+ * WillingList
  * @author 
  */
 public class Willinglist implements Serializable {
     /**
-     * id
+     * id 编号
      */
     private Integer id;
 
     /**
-     * name
+     * willingp 愿望提交人
      */
-    private String name;
+    private String willingp;
 
     /**
-     * passwd
+     * willingt 期望实现时间
      */
-    private String passwd;
+    private Date wilingt;
 
     /**
-     * role
+     * willingg 愿望领取人
      */
-    private String role;
+    private String willingg;
+
+    /**
+     * willingd 愿望实现时间
+     */
+    private Date willingd;
+
+    /**
+     * tjsj 提交日期
+     */
+    private Date tjsj;
+
+    /**
+     * sxbz 实现标志
+     */
+    private String sxbz;
+
+    private String willingname;
 
     private static final long serialVersionUID = 1L;
 
@@ -37,27 +55,59 @@ public class Willinglist implements Serializable {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getWillingp() {
+        return willingp;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setWillingp(String willingp) {
+        this.willingp = willingp;
     }
 
-    public String getPasswd() {
-        return passwd;
+    public Date getWilingt() {
+        return wilingt;
     }
 
-    public void setPasswd(String passwd) {
-        this.passwd = passwd;
+    public void setWilingt(Date wilingt) {
+        this.wilingt = wilingt;
     }
 
-    public String getRole() {
-        return role;
+    public String getWillingg() {
+        return willingg;
     }
 
-    public void setRole(String role) {
-        this.role = role;
+    public void setWillingg(String willingg) {
+        this.willingg = willingg;
+    }
+
+    public Date getWillingd() {
+        return willingd;
+    }
+
+    public void setWillingd(Date willingd) {
+        this.willingd = willingd;
+    }
+
+    public Date getTjsj() {
+        return tjsj;
+    }
+
+    public void setTjsj(Date tjsj) {
+        this.tjsj = tjsj;
+    }
+
+    public String getSxbz() {
+        return sxbz;
+    }
+
+    public void setSxbz(String sxbz) {
+        this.sxbz = sxbz;
+    }
+
+    public String getWillingname() {
+        return willingname;
+    }
+
+    public void setWillingname(String willingname) {
+        this.willingname = willingname;
     }
 }
