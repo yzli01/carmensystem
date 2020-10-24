@@ -1,6 +1,7 @@
 package com.yzli.carmensystem.controller;
 
 import com.yzli.carmensystem.pojo.User;
+import com.yzli.carmensystem.result.Result;
 import com.yzli.carmensystem.service.UserManagerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -21,19 +22,19 @@ public class LoginController {
     @CrossOrigin
     @PostMapping(value = "api/login")
     @ResponseBody
-    public int login(@RequestBody User user){
+    public Result login(@RequestBody User user){
         String username=user.getName();
         username= HtmlUtils.htmlEscape(username);
 
         if(userManagerService.IsExitedUser(username)){
             User user1=userManagerService.getUserById(userManagerService.getUserId(username));
             if (Objects.equals(user1.getPasswd(),user.getPasswd())){
-                return 200;
+                return new Result(200);
             }else{
-                return 400;
+                return new Result(400);
             }
         }else {
-            return 400;
+            return new Result(400);
         }
     }
 }
