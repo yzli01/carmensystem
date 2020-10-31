@@ -3,6 +3,8 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import ElementUI from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
 
 Vue.config.productionTip = false
 
@@ -14,9 +16,13 @@ axios.defaults.baseURL = 'http://localhost:8663/api'
 Vue.prototype.$axios = axios
 Vue.config.productionTip = false
 
+// eslint-disable-next-line no-undef
+Vue.use(ElementUI)
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
+  render: h => h(App),
   router,
   components: { App },
   template: '<App/>'
