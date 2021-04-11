@@ -2,15 +2,16 @@ package com.yzli.carmensystem.controller;
 
 import com.yzli.carmensystem.pojo.User;
 import com.yzli.carmensystem.service.UserManagerService;
+import com.yzli.carmensystem.service.UserManagerServiceImp;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
+import javax.annotation.Resource;
 
 @Controller
 public class UserController {
-    @Autowired
+    @Resource(name="userManagerService")
     UserManagerService userManagerService;
 
     @CrossOrigin

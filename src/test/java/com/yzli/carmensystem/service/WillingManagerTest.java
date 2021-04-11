@@ -8,13 +8,11 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.Date;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 @RunWith(SpringRunner.class)
 @SpringBootTest
 class WillingManagerTest {
     @Autowired
-    WillingManager willingManager;
+    WillingManagerImp willingManager;
 
     @Test
     void getWillingList() {

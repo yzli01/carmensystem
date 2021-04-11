@@ -7,15 +7,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import javax.swing.*;
-
-import static org.junit.jupiter.api.Assertions.*;
-
 @RunWith(SpringRunner.class)
 @SpringBootTest
 class UserManagerServiceTest {
     @Autowired
-    UserManagerService userManagerService;
+    UserManagerServiceImp userManagerService;
 
     @Test
     void isExitedUser() {
